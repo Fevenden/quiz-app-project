@@ -27,8 +27,7 @@ header {
   text-align: center;
   border: 2px solid black;
   margin-top: 50px;
-  Height: 500px;
-  padding: 20px
+  padding: 50px
 }
 
 .startImg {
@@ -43,6 +42,16 @@ header {
   width: 200px;
   margin: auto;
   height: 50px
+}
+
+.question {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+input {
+  margin-top: 20px;
 }
 
 @media screen and (min-width: 500px) {
