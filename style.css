@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    font-family: 'Roboto';
 }
 
 header {
@@ -8,6 +9,15 @@ header {
     border: 2px solid black;
     height: 100px;
     text-align: center;
+    background-image: url("headerImg.jpg");
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-shadow: 2px 2px 0 black;
+}
+
+.headerList {
+  font-size: 20px
 }
 
 .quizTitle {
@@ -36,6 +46,7 @@ header {
   border: 2px solid black;
   height: 225px;
   width: 200px;
+  background-image: startPgImg.jpg;
 }
 
 .button {
