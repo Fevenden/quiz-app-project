@@ -9,7 +9,7 @@ header {
     border: 2px solid black;
     height: 100px;
     text-align: center;
-    background-image: url("headerImg.jpg");
+    background-image: url("images/headerImg.jpg");
     background-size: cover;
     background-position: center;
     color: white;
