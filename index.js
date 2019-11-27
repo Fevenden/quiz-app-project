@@ -72,7 +72,7 @@ function generateFinalPage() {
   let passed =`
     <h2>Your score is ${score}/5!</h2>
     <p>You passed! feel free to try again, click the button below</p>
-    <img class="passedImg image" src="images/skyrimspecialedition-1280-1510795773755.jpg" alt="Hero from Skyrim">
+    <img class="passedImg image" id="passedImg" src="images/skyrimspecialedition-1280-1510795773755.jpg" alt="Hero from Skyrim">
     <button type="button" class="restart button">Try again</button>
   `;
   let failed =`
