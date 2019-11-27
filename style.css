@@ -53,9 +53,14 @@ header {
   height: 225px;
 }
 
-#passedImg.passedImg, #failedImg.failedImg {
+#passedImg.passedImg {
 max-width: 250px;
 object-fit: cover;
+}
+
+#failedImg.failedImg {
+  max-width: 250px;
+  object-fit: cover;
 }
 
 .button {
