@@ -59,6 +59,10 @@ header {
   margin: auto;
   height: 50px;
   margin-top: 20px;
+  background-color: black;
+  border-radius: 25px;
+  color: white;
+  cursor: pointer;
 }
 
 .question {
@@ -69,6 +73,19 @@ header {
 
 input {
   margin-top: 20px;
+  cursor: pointer;
+}
+
+label {
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: rgb(141, 5, 5);
+}
+
+.button:focus {
+  background-color: rgb(129, 5, 5);
 }
 
 @media screen and (min-width: 500px) {

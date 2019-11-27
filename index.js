@@ -23,8 +23,8 @@ function handleCorrect() {
   let correctHtml = `
     <h2>Correct!</h2>
     <p>Not bad, for a milk drinker.</p>
-    <img class="correctImg image" src="images/correctImg.jpg" alt="hand drawn nord giving thumbs up"/>
-    <button type="button" class="next button">Next question</button>
+    <img class="correctImg image" src="images/correctImg.jpg" alt="Hand-drawn nord giving a thumbs up"/>
+    <button type="button" class="next button">Next</button>
   `;
   $('.feedBack').html(correctHtml);
 }
@@ -33,11 +33,12 @@ function handleCorrect() {
 function handleIncorrect() {
   $('.jsBox').hide();
   $('.feedBack').show();
+  let correctAns = STORE[questionNum].answer
   let incorrectHtml = `
-    <h2>Incorrect!</h2>
-    <p>Even a Greybeard can't have all the answers.</p>
-    <img class="wrongImg image" src="images/incorrectImg.jpg" alt="A skull from Skyrim."/>
-    <button type="button" class="next button">Next question</button>
+    <h2>Incorrect! The correct answer was:</h2>
+    <p>"${correctAns}"</p>
+    <img class="wrongImg image" src="images/inCorrectImg.jpg" alt="A skull from Skyrim."/>
+    <button type="button" class="next button">Next</button>
   `;
   $('.feedBack').html(incorrectHtml);
 }
@@ -130,13 +131,15 @@ function renderQuestion(index) {
 
   let formHtml = `
   <form class="question-form">
-    <legend class="question">${STORE[index].question}</legend>
-    
-    <section class="js-options">${options}</section>
+    <fieldset>
+      <legend class="question">${STORE[index].question}</legend>
+      
+      <section class="js-options">${options}</section>
 
-    <div class="pickOne"></div>
+      <div class="pickOne"></div>
 
-    <button type="submit" class="submitAns button">Submit</button>
+      <button type="submit" class="submitAns button">Submit</button>
+    </fieldset>
   </form>`;
   $('.questionPage').html(formHtml);
 }
