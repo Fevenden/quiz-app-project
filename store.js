@@ -1,4 +1,4 @@
-const STORE = [
+export default [
   //question 1
   {
     question: 'What is the Dragonborn?',
@@ -45,7 +45,7 @@ const STORE = [
   },
   //question 5
   {
-    question: 'what will all denizens skyrim die to defend?'
+    question: 'what will all denizens skyrim die to defend?',
     options: [
       'Honor.',
       'Decency',
