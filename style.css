@@ -51,7 +51,11 @@ header {
   margin-left: auto;
   margin-right: auto;
   height: 225px;
-  background-image: startPgImg.jpg;
+}
+
+.passedImg {
+max-width: 250px;
+object-fit: cover;
 }
 
 .button {
