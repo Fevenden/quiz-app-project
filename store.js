@@ -3,12 +3,12 @@ export default [
   {
     question: 'What is the Dragonborn?',
     options: [
-      'A small baby dragon',
-      'A mortal with the soul of a Dova',
-      'Someone who has far to much time on their hands',
-      'The Imperial Emperor'
+      'A small baby dragon.',
+      'A mortal with the soul of a Dova.',
+      'Someone who has far to much time on their hands.',
+      'The Imperial Emperor.'
     ],
-    answer: 'A mortal with the soul of a Dova'
+    answer: 'A mortal with the soul of a Dova.'
   },
   //question 2
   {
@@ -16,21 +16,21 @@ export default [
     options: [
       'Masters of the way of the voice.',
       'Crazy old men who scream at the sky.',
-      'Men who have cultivated the ultimate facial hair',
+      'Men who have cultivated the ultimate facial hair.',
       'Some guys in need of a shower.'
     ],
-    answer: 'Masters of the way of the voice',
+    answer: 'Masters of the way of the voice.',
   },
   //question 3
   {
     question: 'What does Lydia do?',
     options: [
-      'Block of doorways.',
-      'Begrudgingly carries your burdens.',
-      'Get fus ro dahed off cliffs.',
-      'All of the above',
+      'Block off doorways.',
+      'Begrudgingly carry your burdens.',
+      'Get fus ro dahed off of cliffs.',
+      'All of the above.',
     ],
-    answer: 'All of the above',
+    answer: 'All of the above.',
   },
   //question 4
   { 
@@ -45,7 +45,7 @@ export default [
   },
   //question 5
   {
-    question: 'what will all denizens skyrim die to defend?',
+    question: 'what will all the people of Skyrim die to defend?',
     options: [
       'Honor.',
       'Decency',
