@@ -53,7 +53,7 @@ header {
   height: 225px;
 }
 
-#passedImg.passedImg {
+#passedImg.passedImg, #failedImg.failedImg {
 max-width: 250px;
 object-fit: cover;
 }

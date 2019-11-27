@@ -78,7 +78,7 @@ function generateFinalPage() {
   let failed =`
     <h2>You scored ${score}/5!</score></h2> 
     <p>You Failed! feel free to try again, click the button below</p>
-    <img class="failedImg image" src="images/youFailed.jpg" alt="A dragon from Skyrim breathing fire">
+    <img class="failedImg image" id="failedImg" src="images/youFailed.jpg" alt="A dragon from Skyrim breathing fire">
     <button type="button" class="restart button">Try again</button>
   `;
   if (score >= 3) {
