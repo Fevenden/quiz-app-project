@@ -37,7 +37,7 @@ function handleIncorrect() {
   let incorrectHtml = `
     <h2>Incorrect! The correct answer was:</h2>
     <p>"${correctAns}"</p>
-    <img class="wrongImg image" src="images/IncorrectImg.jpg" alt="A skull from Skyrim."/>
+    <img class="wrongImg image" src="images/incorrectImg.jpg" alt="A skull from Skyrim."/>
     <button type="button" class="next button">Next</button>
   `;
   $('.feedBack').html(incorrectHtml);
