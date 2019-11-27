@@ -48,22 +48,62 @@ function handleSubmitClick() {
     e.preventDefault();
     let select = $('input[name=qAns]:checked').val();
     let correctAnswer = STORE[questionNum].answer;
-    console.log(select, correctAnswer)
     if(select === correctAnswer){
       handleCorrect();
-    } else {
-      handleIncorrect();
-    }
+    } else (
+      handleIncorrect()
+    )
   })
 }
 
+//restarts the quiz
+function handleRestartClick() {
+  $('.finalPage').on('click', '.restart', function(e) {
+    score = 0;
+    questionNum = 0;
+    $('.jsBox').hide();
+    $('.mainPage').show();
+  }) 
+}
+
+//will determine if user passed or failed and display corresponding page.
+function generateFinalPage() {
+  let passed =`
+    <h2>Your score is ${score}/5!</h2>
+    <p>You passed! feel free to try again, click the button below</p>
+    <img class="passedImg image" src="images/skyrimspecialedition-1280-1510795773755.jpg" alt="Hero from Skyrim">
+    <button type="button" class="restart button">Try again</button>
+  `;
+  let failed =`
+    <h2>You scored ${score}/5!</score></h2> 
+    <p>You Failed! feel free to try again, click the button below</p>
+    <img class="failedImg image" src="images/youFailed.jpg" alt="A dragon from Skyrim breathing fire">
+    <button type="button" class="restart button">Try again</button>
+  `;
+  if (score >= 3) {
+    console.log('passed');
+    $('.finalPage').html(passed);
+  } else {
+    console.log('failed');
+    $('.finalPage').html(failed);
+  };
+}
+
+//will display next question or final page if all questions have been answered.
 function handleNextClick() {
    $('.feedBack').on('click', '.next', function(e) {
     questionNum += 1;
     $('.feedBack').hide();
-    $('.questionPage').show();
-    renderQuestion(questionNum);
-    updateQuestionInfo()
+    
+    if (questionNum < STORE.length) {
+      $('.questionPage').show();
+      renderQuestion(questionNum);
+      updateQuestionInfo();
+    } else {
+      $('.questionInfo').hide()
+      $('.finalPage').show();
+      generateFinalPage();
+    }
   });
 }
 
@@ -83,7 +123,7 @@ function renderQuestion(index) {
     let id = `answer${i}`;
     options += `
     <div>
-      <input type="radio" name="qAns" value="${item}" id="${id}"/>
+      <input type="radio" name="qAns" value="${item}" id="${id}" required="required"/>
       <label class="answer" for="${id}">${item}</label>
     </div>`;
   };
@@ -94,6 +134,8 @@ function renderQuestion(index) {
     
     <section class="js-options">${options}</section>
 
+    <div class="pickOne"></div>
+
     <button type="submit" class="submitAns button">Submit</button>
   </form>`;
   $('.questionPage').html(formHtml);
@@ -103,6 +145,7 @@ function handleQuiz() {
   startQuiz();
   handleSubmitClick();
   handleNextClick();
+  handleRestartClick();
 }
 
 $(handleQuiz())

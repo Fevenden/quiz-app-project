@@ -4,11 +4,11 @@ export default [
     question: 'What is the Dragonborn?',
     options: [
       'A small baby dragon.',
-      'A mortal with the soul of a Dova.',
+      'A mortal with the soul of a Dovah.',
       'Someone who has far to much time on their hands.',
       'The Imperial Emperor.'
     ],
-    answer: 'A mortal with the soul of a Dova.'
+    answer: 'A mortal with the soul of a Dovah.'
   },
   //question 2
   {
@@ -34,7 +34,7 @@ export default [
   },
   //question 4
   { 
-    question: 'what does fus ro dah mean?',
+    question: 'what does "fus ro dah" mean?',
     options: [
       'Focus on that.',
       'Fussy running dog.',
